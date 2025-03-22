@@ -1,0 +1,145 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #D9B29C;
+}
+body{
+    display: flex;
+    justify-content: center;
+}
+#page{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 100%;
+    background-color: #ffffff;
+    border-left: 2px solid #7D5F3B;
+    border-right: 2px solid #7D5F3B;
+    box-shadow: -5px 0px 5px #7D5F3B, 5px 0px 5px #7D5F3B;
+    overflow-y: auto;
+}
+
+/* Header */
+#background-image{
+    width: 100%;
+    height: 20%;
+}
+#background-image > img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+/* Conteúdo */
+#content{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+#btn{
+    width: 200px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 3px solid #83A603;  
+    font-weight: bold;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#btn:hover{
+    background-color: #b5bd9a;
+    cursor: pointer;
+    box-shadow: 1px 2px 1px #83a6033d;
+}
+.btn{
+    width: 90px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 3px solid #7D5F3B;
+    font-weight: bold;
+}
+.btn:hover{
+    background-color: #7d5f3b48;
+    cursor: pointer;
+    box-shadow: 1px 2px 1px #7d5f3b48;
+}
+.btn:disabled {
+    background-color: #f0f0f0;
+    border: 1px solid gray;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Formulário */
+#formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #7D5F3B;
+    box-shadow: -3px 0px 3px #7D5F3B, 3px 0px 3px #7D5F3B;
+    padding: 20px;
+    width: 40%;
+}
+form{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.line{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.l{
+    width: 50%;
+}
+.l > input, .l > textarea{
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    max-height: 250px;
+    resize: vertical; 
+    border: 1px solid #7D5F3B;
+}
+.l > input:focus,
+.l > textarea:focus {
+    outline: none;
+    border: 1px solid #7D5F3B;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px #7D5F3B;
+}
+
+
+label{
+    font-weight: bold;
+}
+
+
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #7D5F3B;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color: #D9B29C;
+}

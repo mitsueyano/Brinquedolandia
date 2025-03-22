@@ -1,0 +1,79 @@
+[
+    {
+        "endereco": "pescapeixe",
+        "nome": "Pesca Peixe",
+        "descricao": "Pesca Peixe é uma divertida e interativa atividade para crianças, onde elas podem simular a pesca de peixes com uma vara magnética. Ideal para aprimorar habilidades motoras, coordenação e proporcionar momentos de diversão.",
+        "comojogar": "O objetivo do jogo é usar a vara magnética para pescar o maior número de peixinhos possíveis. Para jogar, basta mover a vara até encostar no peixe e, ao fazer isso, o peixe será pescado. Divirta-se enquanto desenvolve suas habilidades de coordenação e concentração!",
+        "img": [
+            "pescapeixe.png",
+            "pescapeixe1.png",
+            "pescapeixe2.png"
+        ]
+    },
+    {
+        "endereco": "jogodamemoria",
+        "nome": "Jogo da Memória",
+        "descricao": "Jogo da Memória é um clássico que desafia a mente de forma divertida! Com imagens coloridas e encantadoras, este jogo estimula a memória e a concentração das crianças.",
+        "comojogar": "O objetivo do jogo é encontrar os pares de cartas iguais. As cartas são viradas para baixo, e os jogadores devem virar duas cartas por vez, tentando memorizar a posição delas. Se as cartas forem iguais, elas permanecem viradas para cima. O jogador que encontrar mais pares vence!",
+        "img": [
+            "jogodamemoria.png",
+            "jogodamemoria1.png",
+            "jogodamemoria2.png"
+        ]
+    },
+    {
+        "endereco": "cubomagico",
+        "nome": "Cubo Mágico",
+        "descricao": "Cubo Mágico é o brinquedo ideal para quem adora desafios! Com seus movimentos complexos e soluções criativas, ele testa sua paciência e habilidade de resolução de problemas. Esse clássico ajuda a melhorar a lógica, o pensamento estratégico e a concentração.",
+        "comojogar": "O objetivo do jogo é alinhar todas as cores de cada face do cubo. Para fazer isso, você precisa girar as camadas do cubo de forma estratégica até que todas as peças de cada lado fiquem da mesma cor. O desafio é completar o cubo sem misturar as cores das outras faces!",
+        "img": [
+            "cubomagico.png",
+            "cubomagico1.png",
+            "cubomagico2.png"
+        ]
+    },
+    {
+        "endereco": "quebracabeca",
+        "nome": "Quebra-Cabeça",
+        "descricao": "Quebra-Cabeça é um jogo que desafia a mente e a percepção visual. Ao montar as peças, você exercita a paciência, o raciocínio lógico e a coordenação motora. Cada peça se encaixando no lugar certo traz uma sensação de conquista, tornando esse brinquedo uma ótima opção para desenvolver habilidades cognitivas enquanto se diverte.",
+        "comojogar": "O objetivo do jogo é montar a imagem completa utilizando as peças do quebra-cabeça. O desafio é encaixar as peças corretamente para revelar a imagem final!",
+        "img": [
+            "quebracabeca.png",
+            "quebracabeca1.png",
+            "quebracabeca2.png"
+        ]
+    },
+    {
+        "endereco": "bingo",
+        "nome": "Bingo",
+        "descricao": "Bingo é um jogo clássico e divertido, ideal para reunir amigos e familiares. O objetivo é completar uma linha ou cartela com os números sorteados, criando momentos de emoção e competição saudável.",
+        "comojogar": "O objetivo do jogo é marcar os números sorteados na sua cartela. O sorteador vai puxando os números aleatoriamente e você deve marcar os números que aparecerem na sua cartela. O primeiro a completar uma linha ou toda a cartela vence!",
+        "img": [
+            "bingo.png",
+            "bingo1.png",
+            "bingo2.png"
+        ]
+    },
+    {
+        "endereco": "blocosdemontar",
+        "nome": "Blocos de Montar",
+        "descricao": "Blocos de Montar é uma atividade criativa e educativa que permite às crianças construir diferentes formas e estruturas. Ideal para desenvolver a imaginação, habilidades motoras e raciocínio lógico.",
+        "comojogar": "O objetivo do jogo é usar os blocos para montar diversas figuras ou estruturas, seguindo a sua imaginação ou criando designs específicos. Cada peça se encaixa de forma única, permitindo infinitas possibilidades de construção!",
+        "img": [
+            "blocosdemontar.png",
+            "blocosdemontar1.png",
+            "blocosdemontar2.png"
+        ]
+    },
+    {
+        "endereco": "mancala",
+        "nome": "Mancala",
+        "descricao": "Mancala é um jogo de estratégia e raciocínio que desafia os jogadores a pensar com antecipação. Com seu formato simples, mas envolvente, é ideal para melhorar a concentração e habilidades de planejamento.",
+        "comojogar": "Cada jogador começa com 4 pedras em cada um de seus buracos, exceto no mancala (buraco maior), que serve para armazenar as pedras capturadas. O objetivo é capturar mais pedras do que o adversário, colocando-as no seu mancala. No seu turno, o jogador escolhe um buraco com pedras e distribui as pedras ao redor dos buracos, no sentido anti-horário. A distribuição continua até que as pedras acabem, começando no próximo buraco após o que foi escolhido. Se o jogador terminar em um buraco vazio de seu lado, ele pode capturar as pedras do buraco oposto do adversário e colocá-las no seu mancala. Se terminar em um buraco com mais pedras, ele pega essas pedras e distribui novamente. O jogo termina quando todas as pedras de um jogador são movidas para o seu mancala. O vencedor é quem tiver mais pedras no mancala no final do jogo.",
+        "img": [
+            "mancala.png",
+            "mancala1.png",
+            "mancala2.png"
+        ]
+    }
+]
