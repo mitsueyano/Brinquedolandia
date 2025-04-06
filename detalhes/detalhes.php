@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,17 +9,13 @@
     <?php
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (isset($_POST['id'])) {
-
-                //Carrega os brinquedos existentes do arquivo json de acordo com o ID
                 $id = $_POST['id'];
-
                 $brinquedos = json_decode(file_get_contents('../brinquedos.json'), true);
                 $brinquedo = $brinquedos[$id];
                 $nome = $brinquedo['nome'];
                 $descricao = $brinquedo['descricao'];
                 $imagem = "../img/" . $brinquedo['img'][0];
                 $comojogar = $brinquedo['comojogar'];
-
             } else {
                 echo "ID não recebido.";
                 exit;
@@ -40,7 +35,7 @@
             <div id="desc">
                 <p><?php echo $descricao; ?></p>
                 <h2>Como jogar</h2>
-                <p  id="espaco"><?php echo $comojogar;?></p>
+                <p id="espaco"><?php echo $comojogar;?></p>
                 <h2>Imagens</h2>
                 <div class="imagens">
                     <?php
@@ -56,12 +51,31 @@
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
                 <input type="submit" value="Editar Brinquedo" name="editar" class="btn">
             </form>
-            <form action="../funcoes/excluirbrinquedo.php" method="POST">
-                <input type="hidden" name="id" value="<?php echo $id; ?>">
-                <input type="submit" value="Excluir Brinquedo" name="excluir" id="btnExcluir">
-            </form>
-
+            <button id="btnExcluir" class="btn">Excluir Brinquedo</button>
+            <div id="modalConfirmacao">
+                <div class="modalconteudo">
+                    <p>Deseja mesmo <strong>EXCLUIR</strong> esse brinquedo?</p>
+                    <form id="formExcluir" action="../funcoes/excluirbrinquedo.php" method="POST">
+                        <input type="hidden" name="id" value="<?php echo $id; ?>">
+                        <button type="submit" name="excluir" id="excluir">Sim, excluir</button>
+                        <button type="button" id="cancelar" onclick="fecharModal()">Cancelar</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script>
+        const btnExcluir = document.getElementById('btnExcluir');
+        const modal = document.getElementById('modalConfirmacao');
+
+        btnExcluir.addEventListener('click', () => {
+            modal.style.display = 'block';
+        });
+
+        function fecharModal() {
+            modal.style.display = 'none';
+        }
+    </script>
 </body>
 </html>
