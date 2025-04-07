@@ -123,13 +123,46 @@ form{
     background-color: #ffffff;
     box-shadow: 0 0 5px #7D5F3B;
 }
-
-
+.peca{
+    display: flex;
+    justify-content: center;
+}
+.peca > input{
+    width: 150px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.btnExcluir{
+    width: 120px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 2px solid #7D5F3B;
+    font-weight: bold;  
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.btnExcluir:hover{
+    background-color: #7d5f3b48;
+    cursor: pointer;
+}
+#addPeca{
+    width: 150px;
+    height: 25px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 2px solid #7D5F3B;
+    font-weight: bold;  
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#addPeca:hover{
+    background-color: #7d5f3b48;
+    cursor: pointer;
+}
 label{
     font-weight: bold;
 }
-
-
 
 /* Scrollbar */
 ::-webkit-scrollbar {

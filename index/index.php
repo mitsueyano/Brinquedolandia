@@ -13,9 +13,10 @@
         </div>
         <div id="content">
             <form action="../novobrinquedo/novobrinquedo.php" method="POST">
-                <input type="submit" value="Novo Brinquedo" id="btn">
+                <input type="submit" value="Novo Brinquedo" id="btn"> <!-- Botão "Novo Brinquedo" -->
             </form>
             <?php
+                //Recebe os dados
                 $brinquedos = json_decode(file_get_contents('../brinquedos.json'), true);
                 $id = 0;
                 foreach ($brinquedos as $brinquedo) {
@@ -24,13 +25,15 @@
                     $descricao = $brinquedo['descricao'];
                     $imagem = "../img/" . $brinquedo['img'][0];
             ?>
-
                     <div class="box">
+                        <!-- Imagem -->
                         <img src="<?php echo $imagem; ?>" alt="imagem do brinquedo <?php echo $nome; ?>">
+                        <!-- Descrição -->
                         <div class="desc">
                             <h1><?php echo $nome; ?></h1>
                             <p><?php echo $descricao; ?></p>
                         </div>
+                        <!-- Botão "Saiba mais" -->
                         <form action="../detalhes/detalhes.php" method="POST">
                             <input type="hidden" name="id" value="<?php echo $id; ?>">
                             <input type="submit" value="Saiba mais" class="btn">
@@ -42,6 +45,7 @@
                     $id++;
                 }
             ?>
+                <!-- Integrantes -->
                 <a href="integrantes.php">Integrantes</a>           
         </div>
     </div>

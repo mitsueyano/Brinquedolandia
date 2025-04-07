@@ -22,7 +22,7 @@ if (isset($_POST['id'])) {
         $brinquedos = array_values($brinquedos);
 
         //Salva o array atualizado de volta no arquivo json
-        file_put_contents('../brinquedos.json', json_encode($brinquedos, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+        file_put_contents('../brinquedos.json', json_encode($brinquedos, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)); //Codificação em UTF-8 e sem "escapar caracteres especiais" para não prejudicar o json
 
         header('Location: ../index/index.php');
         exit();

@@ -5,3 +5,6 @@ Pega Varetas é um jogo de destreza e paciência, onde os jogadores precisam ret
 
 Como jogar:
 O jogo começa com as varetas empilhadas de forma aleatória. Cada jogador, por sua vez, tenta retirar uma vareta da pilha sem mexer nas outras. Se as varetas se moverem, a vez é passada para o próximo jogador. O objetivo é pegar o maior número de varetas possível. Varetas de cores diferentes podem ter valores distintos, e o vencedor é quem somar mais pontos no final do jogo.
+
+Peças:
+Varetas

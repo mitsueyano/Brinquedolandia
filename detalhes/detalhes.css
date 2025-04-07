@@ -146,7 +146,6 @@ body{
     width: 100%; height: 100%;
     background-color: #00000080;
 }
-
 .modalconteudo {
     background: white;
     padding: 20px;
@@ -156,7 +155,6 @@ body{
     text-align: center;
     border: 2px solid #7D5F3B;
 }
-
 .modalconteudo button {
     width: 200px;
     margin: 10px;
@@ -171,18 +169,19 @@ body{
     cursor: pointer;
     box-shadow: 1px 2px 1px;
 }
-
 #excluir{
     border-color: #a60303;
-    background-color: #a6030369;
+    background-color: #ffffff;
 }
 #excluir:hover{
     box-shadow: 1px 2px 1px #a603033a;
+    background-color: #a6030369;
 }
 #cancelar{
+    background-color: #ffffff;
     border-color: #000000;
-    background-color: #00000034;
 }
 #cancelar:hover{
     box-shadow: 1px 2px 1px #00000034;
+    background-color: #00000034;
 }

@@ -22,7 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = $_POST['nome'];
     $descricao = $_POST['desc'];
     $comojogar = $_POST['comojogar'];
-    
+    $pecas = isset($_POST['pecas']) ? $_POST['pecas'] : [];
+
     //Salva as imagens com os nomes renomeados
     $imgprincipal = salvarImagem($_FILES['imgprincipal'], $nome, '');
     $img1 = salvarImagem($_FILES['img1'], $nome, 1);
@@ -30,24 +31,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (!$imgprincipal || !$img1 || !$img2) {
         echo "Erro ao salvar as imagens.";
+        exit;
     }
-    
+
     //Carrega os brinquedos existentes do arquivo json
     $brinquedos = json_decode(file_get_contents('../brinquedos.json'), true);
-    
+
     //Adiciona o novo brinquedo no array
     $novoBrinquedo = [
         'endereco' => strtolower(str_replace(' ', '', $nome)),
         'nome' => $nome,
         'descricao' => $descricao,
         'comojogar' => $comojogar,
-        'img' => [$imgprincipal, $img1, $img2]
+        'img' => [$imgprincipal, $img1, $img2],
+        'pecas' => $pecas 
     ];
     $brinquedos[] = $novoBrinquedo;
-    
+
     //Salva o array atualizado de volta no arquivo json
-    file_put_contents('../brinquedos.json', json_encode($brinquedos, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)); //Codificação em UTF-8 e sem "escapar caracteres especiais" para não prejudicar o json
-    
+    file_put_contents('../brinquedos.json', json_encode($brinquedos, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+
     header('Location: ../index/index.php');
 }
+
 ?>

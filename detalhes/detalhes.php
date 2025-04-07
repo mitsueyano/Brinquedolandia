@@ -7,6 +7,7 @@
 </head>
 <body>
     <?php
+        //Recebe os dados
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (isset($_POST['id'])) {
                 $id = $_POST['id'];
@@ -32,10 +33,13 @@
             <div class="box">
                 <img src="<?php echo $imagem; ?>" alt="Imagem do brinquedo <?php echo $nome; ?>">
             </div>
+            <!-- Descrição -->
             <div id="desc">
                 <p><?php echo $descricao; ?></p>
+            <!-- Como Jogar -->
                 <h2>Como jogar</h2>
                 <p id="espaco"><?php echo $comojogar;?></p>
+            <!-- Imagens -->    
                 <h2>Imagens</h2>
                 <div class="imagens">
                     <?php
@@ -46,11 +50,22 @@
                         }
                     ?>
                 </div>
+            <!-- Peças -->
+                <?php if (isset($brinquedo['pecas']) && is_array($brinquedo['pecas']) && count($brinquedo['pecas']) > 0): ?>
+                    <h2>Peças</h2>
+                    <ul>
+                        <?php foreach ($brinquedo['pecas'] as $peca): ?>
+                            <li><?php echo htmlspecialchars($peca); ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
             </div>
+            <!-- Botão "Editar" -->
             <form action="../editar/editar.php" method="POST">
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
                 <input type="submit" value="Editar Brinquedo" name="editar" class="btn">
             </form>
+            <!-- Botão "Excluir" e Modal de confirmação -->
             <button id="btnExcluir" class="btn">Excluir Brinquedo</button>
             <div id="modalConfirmacao">
                 <div class="modalconteudo">
@@ -64,15 +79,12 @@
             </div>
         </div>
     </div>
-
     <script>
         const btnExcluir = document.getElementById('btnExcluir');
         const modal = document.getElementById('modalConfirmacao');
-
         btnExcluir.addEventListener('click', () => {
             modal.style.display = 'block';
         });
-
         function fecharModal() {
             modal.style.display = 'none';
         }

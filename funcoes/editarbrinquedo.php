@@ -7,17 +7,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (isset($brinquedos[$id])) {
             $brinquedo = $brinquedos[$id];
 
-            //Atualiza os dados do brinquedo com os valores editados (UTF-8 para não prejudicar o json)
+            // //Atualiza os dados do brinquedo com os valores editados (UTF-8 para não prejudicar o json)
             $nome = mb_convert_encoding($_POST['nome'], 'UTF-8', 'UTF-8');
             $descricao = mb_convert_encoding($_POST['desc'], 'UTF-8', 'UTF-8');
             $comojogar = mb_convert_encoding($_POST['comojogar'], 'UTF-8', 'UTF-8');
 
-            //Verifica se as imagens foram alteradas
             $imgPrincipal = $brinquedo['img'][0];
             $img1 = isset($brinquedo['img'][1]) ? $brinquedo['img'][1] : '';
             $img2 = isset($brinquedo['img'][2]) ? $brinquedo['img'][2] : '';
 
-            //Faz o upload de novas imagens
             if (isset($_FILES['imgprincipal']) && $_FILES['imgprincipal']['error'] == 0) {
                 $imgPrincipal = $_FILES['imgprincipal']['name'];
                 move_uploaded_file($_FILES['imgprincipal']['tmp_name'], '../img/' . $imgPrincipal);
@@ -31,16 +29,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 move_uploaded_file($_FILES['img2']['tmp_name'], '../img/' . $img2);
             }
 
-            //Atualiza o brinquedo
+            $pecas = isset($_POST['pecas']) ? array_map(function ($peca) {
+                return mb_convert_encoding($peca, 'UTF-8', 'UTF-8');
+            }, $_POST['pecas']) : [];
+
             $brinquedo['nome'] = $nome;
             $brinquedo['descricao'] = $descricao;
             $brinquedo['comojogar'] = $comojogar;
             $brinquedo['img'] = [$imgPrincipal, $img1, $img2];
-
+            $brinquedo['pecas'] = $pecas;
             $brinquedos[$id] = $brinquedo;
 
-            //Salva o array de brinquedos atualizado
-            file_put_contents('../brinquedos.json', json_encode($brinquedos, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)); //Codificação em UTF-8 e sem "escapar caracteres especiais" para não prejudicar o json
+            //Salva o array atualizado de volta no arquivo json
+            file_put_contents('../brinquedos.json', json_encode($brinquedos, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
             header('Location: ../index/index.php');
             exit;

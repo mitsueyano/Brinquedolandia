@@ -2,12 +2,17 @@
     {
         "endereco": "pescapeixe",
         "nome": "Pesca Peixe",
-        "descricao": "Pesca Peixe é uma divertida e interativa atividade para crianças, onde elas podem simular a pesca de peixes com uma vara magnética. Ideal para aprimorar habilidades motoras, coordenação e proporcionar momentos de diversão.",
+        "descricao": "Pesca Peixe é uma divertida e interativa atividade para crianças, onde elas podem simular a pesca de peixes com um pequeno gancho. Ideal para aprimorar habilidades motoras, coordenação e proporcionar momentos de diversão.",
         "comojogar": "O objetivo do jogo é usar a vara magnética para pescar o maior número de peixinhos possíveis. Para jogar, basta mover a vara até encostar no peixe e, ao fazer isso, o peixe será pescado. Divirta-se enquanto desenvolve suas habilidades de coordenação e concentração!",
         "img": [
             "pescapeixe.png",
             "pescapeixe1.png",
             "pescapeixe2.png"
+        ],
+        "pecas": [
+            "Vara com gancho",
+            "Peixes",
+            "Aquário que gira"
         ]
     },
     {
@@ -19,6 +24,9 @@
             "jogodamemoria.png",
             "jogodamemoria1.png",
             "jogodamemoria2.png"
+        ],
+        "pecas": [
+            "Cartas com imagens"
         ]
     },
     {
@@ -30,6 +38,9 @@
             "cubomagico.png",
             "cubomagico1.png",
             "cubomagico2.png"
+        ],
+        "pecas": [
+            "Cubo com peças coloridas"
         ]
     },
     {
@@ -41,6 +52,9 @@
             "quebracabeca.png",
             "quebracabeca1.png",
             "quebracabeca2.png"
+        ],
+        "pecas": [
+            "Peças recortadas do quebra-cabeça"
         ]
     },
     {
@@ -52,6 +66,11 @@
             "bingo.png",
             "bingo1.png",
             "bingo2.png"
+        ],
+        "pecas": [
+            "Cartelas",
+            "Fichas",
+            "Sorteador"
         ]
     },
     {
@@ -63,6 +82,9 @@
             "blocosdemontar.png",
             "blocosdemontar1.png",
             "blocosdemontar2.png"
+        ],
+        "pecas": [
+            "Blocos coloridos"
         ]
     },
     {
@@ -74,6 +96,10 @@
             "mancala.png",
             "mancala1.png",
             "mancala2.png"
+        ],
+        "pecas": [
+            "Tabuleiro",
+            "Pedrinhas"
         ]
     }
 ]
