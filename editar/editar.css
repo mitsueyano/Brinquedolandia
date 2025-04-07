@@ -130,12 +130,12 @@ form{
     justify-content: center;
 }
 .peca > input{
-    width: 150px;
+    width: 110px;
     margin-right: 5px;
     margin-bottom: 5px;
 }
 .btnExcluir{
-    width: 120px;
+    width: 150px;
     height: 25px;
     border-radius: 10px;
     background-color: #ffffff;
